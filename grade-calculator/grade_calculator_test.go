@@ -1,6 +1,8 @@
 package esepunittests
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestGetGradeA(t *testing.T) {
 	expected_value := "A"
@@ -89,13 +91,13 @@ func TestGetGradeTypeString(t *testing.T) {
 	gradeCalculator.AddGrade("exam 1", 61, Exam)
 	gradeCalculator.AddGrade("essay on ai ethics", 62, Essay)
 
-	if gradeCalculator.assignments[0].Type.String() != "assignment" {
-		t.Errorf("Expected GradeType.String() to return '%s'; got '%s' instead", "assignment", gradeCalculator.assignments[0].Type.String())
+	if gradeCalculator.grades[0].Type.String() != "assignment" {
+		t.Errorf("Expected GradeType.String() to return '%s'; got '%s' instead", "assignment", gradeCalculator.grades[0].Type.String())
 	}
-	if gradeCalculator.exams[0].Type.String() != "exam" {
-		t.Errorf("Expected GradeType.String() to return '%s'; got '%s' instead", "exam", gradeCalculator.assignments[0].Type.String())
+	if gradeCalculator.grades[1].Type.String() != "exam" {
+		t.Errorf("Expected GradeType.String() to return '%s'; got '%s' instead", "exam", gradeCalculator.grades[0].Type.String())
 	}
-	if gradeCalculator.essays[0].Type.String() != "essay" {
-		t.Errorf("Expected GradeType.String() to return '%s'; got '%s' instead", "essay", gradeCalculator.assignments[0].Type.String())
+	if gradeCalculator.grades[2].Type.String() != "essay" {
+		t.Errorf("Expected GradeType.String() to return '%s'; got '%s' instead", "essay", gradeCalculator.grades[0].Type.String())
 	}
 }

@@ -7,7 +7,7 @@ import (
 func TestGetGradeA(t *testing.T) {
 	expected_value := "A"
 
-	gradeCalculator := NewGradeCalculator()
+	gradeCalculator := NewGradeCalculator(false)
 
 	gradeCalculator.AddGrade("open source assignment", 100, Assignment)
 	gradeCalculator.AddGrade("exam 1", 100, Exam)
@@ -23,7 +23,7 @@ func TestGetGradeA(t *testing.T) {
 func TestGetGradeB(t *testing.T) {
 	expected_value := "B"
 
-	gradeCalculator := NewGradeCalculator()
+	gradeCalculator := NewGradeCalculator(false)
 
 	gradeCalculator.AddGrade("open source assignment", 80, Assignment)
 	gradeCalculator.AddGrade("exam 1", 81, Exam)
@@ -39,7 +39,7 @@ func TestGetGradeB(t *testing.T) {
 func TestGetGradeF(t *testing.T) {
 	expected_value := "F"
 
-	gradeCalculator := NewGradeCalculator()
+	gradeCalculator := NewGradeCalculator(false)
 
 	gradeCalculator.AddGrade("open source assignment", 59, Assignment)
 	gradeCalculator.AddGrade("exam 1", 51, Exam)
@@ -55,7 +55,7 @@ func TestGetGradeF(t *testing.T) {
 func TestGetGradeC(t *testing.T) {
 	expected_value := "C"
 
-	gradeCalculator := NewGradeCalculator()
+	gradeCalculator := NewGradeCalculator(false)
 
 	gradeCalculator.AddGrade("open source assignment", 70, Assignment)
 	gradeCalculator.AddGrade("exam 1", 71, Exam)
@@ -71,7 +71,7 @@ func TestGetGradeC(t *testing.T) {
 func TestGetGradeD(t *testing.T) {
 	expected_value := "D"
 
-	gradeCalculator := NewGradeCalculator()
+	gradeCalculator := NewGradeCalculator(false)
 
 	gradeCalculator.AddGrade("open source assignment", 60, Assignment)
 	gradeCalculator.AddGrade("exam 1", 61, Exam)
@@ -85,7 +85,7 @@ func TestGetGradeD(t *testing.T) {
 }
 
 func TestGetGradeTypeString(t *testing.T) {
-	gradeCalculator := NewGradeCalculator()
+	gradeCalculator := NewGradeCalculator(false)
 
 	gradeCalculator.AddGrade("open source assignment", 60, Assignment)
 	gradeCalculator.AddGrade("exam 1", 61, Exam)
@@ -105,7 +105,7 @@ func TestGetGradeTypeString(t *testing.T) {
 func TestGetGradePass(t *testing.T) {
 	expected_value := "Pass"
 
-	gradeCalculator := NewGradeCalculator()
+	gradeCalculator := NewGradeCalculator(true)
 
 	gradeCalculator.AddGrade("open source assignment", 70, Assignment)
 	gradeCalculator.AddGrade("exam 1", 71, Exam)
@@ -121,7 +121,7 @@ func TestGetGradePass(t *testing.T) {
 func TestGetGradeFail(t *testing.T) {
 	expected_value := "Fail"
 
-	gradeCalculator := NewGradeCalculator()
+	gradeCalculator := NewGradeCalculator(true)
 
 	gradeCalculator.AddGrade("open source assignment", 69, Assignment)
 	gradeCalculator.AddGrade("exam 1", 68, Exam)
